@@ -1,0 +1,719 @@
+
+/* ========================================
+   MATEMATIKOS PRAKTIKA
+   DARK THEME — DRACULA / GREEN
+======================================== */
+
+:root {
+    color-scheme: dark;
+
+    --bg: #282a36;
+    --surface: #30313d;
+    --surface-hover: #383a49;
+    --surface-active: #354640;
+
+    --border: #424453;
+    --border-hover: #626576;
+
+    --text: #f8f8f2;
+    --text-secondary: #c0c1cc;
+    --text-muted: #9496a6;
+
+    --accent: #00bfa5;
+    --accent-hover: #16d4b8;
+    --accent-soft: rgba(0, 191, 165, 0.10);
+    --accent-border: rgba(0, 191, 165, 0.55);
+
+    --success: #50d6a0;
+    --error: #ff758f;
+
+    --radius: 14px;
+    --radius-lg: 20px;
+
+    font-family: Inter, ui-sans-serif, system-ui,
+                 -apple-system, "Segoe UI", Arial, sans-serif;
+
+    color: var(--text);
+    background: var(--bg);
+
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ========================================
+   GLOBAL
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+button {
+    font: inherit;
+}
+
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+::selection {
+    background: var(--accent);
+    color: #101c1b;
+}
+
+/* ========================================
+   PAGE LAYOUT
+======================================== */
+
+.wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    margin-bottom: 36px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 750;
+    letter-spacing: 1.6px;
+}
+
+.symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-border);
+    border-radius: 12px;
+
+    color: var(--accent);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+h1 {
+    margin: 32px 0 8px;
+
+    color: var(--text);
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 750;
+    letter-spacing: -1.6px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+.muted {
+    color: var(--text-muted);
+}
+
+/* ========================================
+   CARDS
+======================================== */
+
+.card {
+    margin-bottom: 20px;
+    padding: 28px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+    margin: 0 0 22px;
+
+    color: var(--text);
+    font-size: 19px;
+    font-weight: 650;
+    letter-spacing: -0.4px;
+}
+
+/* ========================================
+   COURSE SELECTION
+======================================== */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.course {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+
+    padding: 21px 19px;
+
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    color: var(--text);
+    text-align: left;
+
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.course:hover {
+    background: var(--surface-hover);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+}
+
+.course strong {
+    color: var(--text);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.course small {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.course.active {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    box-shadow: inset 0 0 0 1px var(--accent-border);
+}
+
+.course.active strong {
+    color: var(--accent-hover);
+}
+
+.course.active small {
+    color: var(--text-secondary);
+}
+
+.summary {
+    margin-top: 20px;
+    padding-top: 18px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+/* ========================================
+   SECTION HEADERS
+======================================== */
+
+.split {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.quiet {
+    padding: 9px 14px;
+
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 550;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.quiet:hover {
+    background: var(--surface-hover);
+    border-color: var(--border-hover);
+    color: var(--text);
+}
+
+/* ========================================
+   TOPIC CATEGORIES
+======================================== */
+
+.topics {
+    display: grid;
+    gap: 26px;
+}
+
+.category-title {
+    margin-bottom: 12px;
+
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 750;
+
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.topic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    min-height: 60px;
+    padding: 15px 17px;
+
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    color: var(--text);
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.topic:hover {
+    background: var(--surface-hover);
+    border-color: var(--border-hover);
+}
+
+.topic.active {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--text);
+}
+
+.topic .count {
+    flex-shrink: 0;
+
+    color: var(--text-muted);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.topic .ready {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* ========================================
+   QUIZ HEADER
+======================================== */
+
+.quiz-card {
+    padding: 30px;
+}
+
+.eyebrow {
+    margin-bottom: 8px;
+
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 750;
+
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.quiz-card h2 {
+    margin-bottom: 18px;
+}
+
+.percent {
+    padding: 5px 10px;
+
+    background: var(--accent-soft);
+    border-radius: 8px;
+
+    color: var(--accent-hover);
+    font-size: 13px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+/* ========================================
+   PROGRESS BAR
+======================================== */
+
+.bar {
+    width: 100%;
+    height: 8px;
+
+    background: #454755;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.bar > div {
+    width: 0;
+    height: 100%;
+
+    background: var(--accent);
+    border-radius: 100px;
+
+    transition: width 0.35s ease;
+}
+
+.quiz-card .muted {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.empty {
+    padding: 35px 0 20px;
+
+    color: var(--text-muted);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ========================================
+   QUESTIONS
+======================================== */
+
+#question-content {
+    padding-top: 20px;
+}
+
+#counter {
+    margin-bottom: 12px;
+}
+
+h3 {
+    margin: 15px 0 26px;
+
+    color: var(--text);
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 600;
+    line-height: 1.65;
+    letter-spacing: -0.4px;
+}
+
+/* ========================================
+   ANSWER OPTIONS
+======================================== */
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    min-height: 72px;
+    padding: 15px 17px;
+
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    color: var(--text);
+    font-size: 16px;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.option:hover {
+    background: var(--surface-hover);
+    border-color: var(--border-hover);
+}
+
+.option.selected {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+}
+
+.option.selected .letter {
+    background: var(--accent);
+    color: #102823;
+}
+
+.letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 35px;
+    height: 35px;
+
+    background: #414351;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 750;
+}
+
+/* ========================================
+   ACTION BUTTONS
+======================================== */
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.primary {
+    padding: 13px 23px;
+
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 11px;
+
+    color: #102823;
+    font-size: 14px;
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.primary:hover:not(:disabled) {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.primary:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   FEEDBACK
+======================================== */
+
+#feedback {
+    min-height: 20px;
+    margin-top: 18px;
+
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.right {
+    color: var(--success);
+}
+
+.wrong {
+    color: var(--error);
+}
+
+/* ========================================
+   MATHEMATICAL FORMULAS
+======================================== */
+
+.katex {
+    color: inherit;
+    font-size: 1.08em;
+}
+
+.katex-display {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 8px 0;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    margin-top: 40px;
+
+    color: var(--text-muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #505261;
+    border: 2px solid var(--bg);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #696b7b;
+}
+
+/* ========================================
+   RESPONSIVE — TABLETS
+======================================== */
+
+@media (max-width: 720px) {
+
+    .wrap {
+        padding: 28px 16px 60px;
+    }
+
+    .card,
+    .quiz-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .topic-grid,
+    .options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    h1 {
+        margin-top: 26px;
+    }
+
+    .course {
+        padding: 17px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE — PHONES
+======================================== */
+
+@media (max-width: 480px) {
+
+    .wrap {
+        padding: 22px 12px 50px;
+    }
+
+    .card,
+    .quiz-card {
+        padding: 17px;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .course strong {
+        font-size: 23px;
+    }
+
+    .topic-grid,
+    .options {
+        grid-template-columns: 1fr;
+    }
+
+    .split {
+        align-items: flex-start;
+    }
+
+    .quiet {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    h3 {
+        font-size: 21px;
+    }
+
+    .option {
+        min-height: 62px;
+    }
+
+    .primary {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
