@@ -304,3 +304,206 @@ const QUESTIONS = [
         correct: 2
     }
 ];
+
+
+const additionalQuestions = [
+    {
+        id: 1017,
+        question: String.raw`Apskaičiuokite: $\frac{8}{3+\sqrt5}+\frac{8}{3-\sqrt5}$`,
+        options: [
+            String.raw`$8$`,
+            String.raw`$12$`,
+            String.raw`$6\sqrt5$`,
+            String.raw`$4$`
+        ],
+        correct: 1
+    },
+
+    {
+        id: 1018,
+        question: String.raw`Apskaičiuokite: $\frac{5}{\sqrt6+1}-\frac{5}{\sqrt6-1}$`,
+        options: [
+            String.raw`$2$`,
+            String.raw`$-5$`,
+            String.raw`$-2$`,
+            String.raw`$5\sqrt6$`
+        ],
+        correct: 2
+    },
+
+    {
+        id: 1019,
+        question: String.raw`Raskite $x$: $\left(\sqrt[4]{\sqrt[x]{16}}\right)^{12}=8$`,
+        options: [
+            String.raw`$3$`,
+            String.raw`$6$`,
+            String.raw`$8$`,
+            String.raw`$4$`
+        ],
+        correct: 3
+    },
+
+    {
+        id: 1020,
+        question: String.raw`Raskite $x$: $\left(\sqrt[3]{\sqrt[x]{64}}\right)^6=16$`,
+        options: [
+            String.raw`$3$`,
+            String.raw`$4$`,
+            String.raw`$6$`,
+            String.raw`$9$`
+        ],
+        correct: 0
+    },
+
+    {
+        id: 1021,
+        question: String.raw`Suprastinkite: $\sqrt{(\sqrt3-4)^2}+\sqrt[4]{16}$`,
+        options: [
+            String.raw`$\sqrt3-2$`,
+            String.raw`$2+\sqrt3$`,
+            String.raw`$6-\sqrt3$`,
+            String.raw`$6+\sqrt3$`
+        ],
+        correct: 2
+    },
+
+    {
+        id: 1022,
+        question: String.raw`Suprastinkite: $\sqrt{19-6\sqrt{10}}$`,
+        options: [
+            String.raw`$3-\sqrt{10}$`,
+            String.raw`$\sqrt{10}-3$`,
+            String.raw`$\sqrt{10}+3$`,
+            String.raw`$10-3\sqrt2$`
+        ],
+        correct: 1
+    },
+
+    {
+        id: 1023,
+        question: String.raw`Suprastinkite: $\sqrt{14-4\sqrt{10}}$`,
+        options: [
+            String.raw`$2-\sqrt{10}$`,
+            String.raw`$\sqrt{10}+2$`,
+            String.raw`$4-\sqrt{10}$`,
+            String.raw`$\sqrt{10}-2$`
+        ],
+        correct: 3
+    },
+
+    {
+        id: 1024,
+        question: String.raw`Suprastinkite: $\sqrt[5]{(\sqrt5-6)^5}-\sqrt[3]{8}+\sqrt[4]{(2-\sqrt5)^4}$`,
+        options: [
+            String.raw`$2\sqrt5-10$`,
+            String.raw`$-6$`,
+            String.raw`$-8$`,
+            String.raw`$2\sqrt5-6$`
+        ],
+        correct: 0
+    },
+
+    {
+        id: 1025,
+        question: String.raw`Suprastinkite: $\sqrt[3]{(4-\sqrt7)^3}+\sqrt[6]{64}-\sqrt{(\sqrt7-5)^2}$`,
+        options: [
+            String.raw`$1-2\sqrt7$`,
+            String.raw`$11-2\sqrt7$`,
+            String.raw`$1$`,
+            String.raw`$3$`
+        ],
+        correct: 2
+    },
+
+    {
+        id: 1026,
+        question: String.raw`Suprastinkite, kai vardiklis nelygus nuliui: $\frac{b^{108}-b^{109}}{109-b-108}$`,
+        options: [
+            String.raw`$b^{109}$`,
+            String.raw`$-b^{108}$`,
+            String.raw`$b^{107}$`,
+            String.raw`$b^{108}$`
+        ],
+        correct: 3
+    },
+
+    {
+        id: 1027,
+        question: String.raw`Suprastinkite, kai vardiklis nelygus nuliui: $\frac{x^{57}-x^{58}}{58-x-57}$`,
+        options: [
+            String.raw`$x^{58}$`,
+            String.raw`$x^{57}$`,
+            String.raw`$-x^{57}$`,
+            String.raw`$x^{56}$`
+        ],
+        correct: 1
+    },
+
+    {
+        id: 1028,
+        question: String.raw`Suprastinkite: $\frac{m^2-8m+16}{m^3-64}$`,
+        options: [
+            String.raw`$\frac{m-4}{m^2+4m+16}$`,
+            String.raw`$\frac{m+4}{m^2+4m+16}$`,
+            String.raw`$\frac1{m-4}$`,
+            String.raw`$m-4$`
+        ],
+        correct: 0
+    },
+
+    {
+        id: 1029,
+        question: String.raw`Suprastinkite: $\frac{x^6-27}{x^4+3x^2+9}$`,
+        options: [
+            String.raw`$x^2+3$`,
+            String.raw`$x^3-3$`,
+            String.raw`$x^2-3$`,
+            String.raw`$x^4-9$`
+        ],
+        correct: 2
+    },
+
+    {
+        id: 1030,
+        question: String.raw`Suprastinkite: $\frac{a^2-10a+25}{a^3-125}$`,
+        options: [
+            String.raw`$\frac{a+5}{a^2+5a+25}$`,
+            String.raw`$\frac{a-5}{a^2+5a+25}$`,
+            String.raw`$\frac1{a-5}$`,
+            String.raw`$a-5$`
+        ],
+        correct: 1
+    },
+
+    {
+        id: 1031,
+        question: String.raw`Suprastinkite, kai $a,b>0$ ir $a\ne b$: $\frac{(a^{\frac34}-b^{\frac34})(a^{\frac34}+b^{\frac34})}{a^{\frac12}-b^{\frac12}}-\sqrt{ab}$`,
+        options: [
+            String.raw`$a-b$`,
+            String.raw`$a+b+\sqrt{ab}$`,
+            String.raw`$\sqrt a+\sqrt b$`,
+            String.raw`$a+b$`
+        ],
+        correct: 3
+    },
+
+    {
+        id: 1032,
+        question: String.raw`Suprastinkite, kai $x,y>0$ ir $x\ne y$: $\frac{(x^{\frac34}-y^{\frac34})(x^{\frac34}+y^{\frac34})}{x^{\frac12}-y^{\frac12}}-x-y$`,
+        options: [
+            String.raw`$\sqrt{xy}$`,
+            String.raw`$x+y$`,
+            String.raw`$\sqrt x+\sqrt y$`,
+            String.raw`$xy$`
+        ],
+        correct: 0
+    }
+];
+
+QUESTIONS.push(
+    ...additionalQuestions.map(q => ({
+        ...q,
+        course: "11-A",
+        topic: "Laipsniai ir šaknys"
+    }))
+);
