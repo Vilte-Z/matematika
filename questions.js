@@ -995,3 +995,158 @@ QUESTIONS.push(
         topic: "Logaritmai ir jų savybės"
     }))
 );
+
+
+const setsQuestions = [
+
+    // 1. Aibių sankirta
+
+    {
+        id: 4001,
+        question: String.raw`Duotos aibės $A=\{2;4;5;7;9;12;15\}$ ir $B=\{1;3;5;7;10;12;14\}$. Kiek elementų priklauso sankirtai $A\cap B$?`,
+        options: [
+            "2 elementai",
+            "3 elementai",
+            "4 elementai",
+            "5 elementai"
+        ],
+        correct: 1
+    },
+
+    // 2. Aibių skirtumas
+
+    {
+        id: 4002,
+        question: String.raw`Duotos aibės $A=\{1;3;4;6;8;10\}$ ir $B=\{2;3;5;6;9;10\}$. Raskite $C=B\setminus A$.`,
+        options: [
+            String.raw`$C=\{1;4;8\}$`,
+            String.raw`$C=\{3;6;10\}$`,
+            String.raw`$C=\{2;5;9\}$`,
+            String.raw`$C=\{2;3;5;6;9;10\}$`
+        ],
+        correct: 2
+    },
+
+    // 3. Aibių savybės
+
+    {
+        id: 4003,
+        question: String.raw`Duotos aibės $A=\{2;4;6;8;10\}$ ir $B=\{4;6;8\}$. Kuris teiginys teisingas?`,
+        options: [
+            String.raw`$A\cap B=A$`,
+            String.raw`$A\cup B=B$`,
+            String.raw`$A\subset B$`,
+            String.raw`$B\setminus A=\varnothing$`
+        ],
+        correct: 3
+    },
+
+    // 4. Poaibių skaičius
+
+    {
+        id: 4004,
+        question: String.raw`Kiek poaibių turi aibė $A=\{2;4;6;8\}$?`,
+        options: [
+            "8 poaibius",
+            "12 poaibių",
+            "16 poaibių",
+            "24 poaibius"
+        ],
+        correct: 2
+    },
+
+    // 5. Intervalų sąjunga ir sankirta
+
+    {
+        id: 4005,
+        question: String.raw`Duoti intervalai $A=(-6;4)$, $B=[-2;8]$, $C=(5;10]$. Raskite $(A\cup B)\cap C$.`,
+        options: [
+            String.raw`$(5;8]$`,
+            String.raw`$[5;8]$`,
+            String.raw`$(-2;8]$`,
+            String.raw`$(5;10]$`
+        ],
+        correct: 0
+    },
+
+    // 6. Intervalų skirtumas
+
+    {
+        id: 4006,
+        question: String.raw`Duotos aibės $A=[-3;7)$ ir $B=(2;10]$. Raskite $B\setminus A$.`,
+        options: [
+            String.raw`$(7;10]$`,
+            String.raw`$[7;10]$`,
+            String.raw`$(2;7)$`,
+            String.raw`$(7;10)$`
+        ],
+        correct: 1
+    },
+
+    // 7. Aibių skirtumas su dviem intervalais
+
+    {
+        id: 4007,
+        question: String.raw`Duotos aibės $A=[-5;9)$ ir $B=(-2;6]$. Raskite $A\setminus B$.`,
+        options: [
+            String.raw`$[-5;-2]\cup(6;9)$`,
+            String.raw`$[-5;-2)\cup[6;9)$`,
+            String.raw`$[-5;-2]\cup[6;9)$`,
+            String.raw`$(-5;-2]\cup(6;9]$`
+        ],
+        correct: 0
+    },
+
+    // 8. Sveikųjų skaičių skaičius
+
+    {
+        id: 4008,
+        question: String.raw`Kiek sveikųjų skaičių priklauso aibių $A=(-7;4]$ ir $B=(-2;9]$ sąjungai $A\cup B$?`,
+        options: [
+            "15",
+            "16",
+            "17",
+            "18"
+        ],
+        correct: 1
+    },
+
+    // 9. Intervalų sankirta
+
+    {
+        id: 4009,
+        question: String.raw`Duotos aibės $A=[-8;6]$ ir $B=(-3;11)$. Raskite $C=A\cap B$.`,
+        options: [
+            String.raw`$C=[-8;11)$`,
+            String.raw`$C=(-3;6]$`,
+            String.raw`$C=[-3;6]$`,
+            String.raw`$C=(-3;11)$`
+        ],
+        correct: 1
+    },
+
+    // 10. Skaičių aibių ryšiai
+
+    {
+        id: 4010,
+        question: String.raw`Tarkime, kad $N$ – natūralieji, $Z$ – sveikieji, $Q$ – racionalieji, $I$ – iracionalieji, $R$ – realieji skaičiai. Kuris teiginys neteisingas?`,
+        options: [
+            String.raw`$N\subset Z$`,
+            String.raw`$Q\cap I=\varnothing$`,
+            String.raw`$Z\cup Q=R$`,
+            String.raw`$R\setminus Q=I$`
+        ],
+        correct: 2
+    }
+
+];
+
+// Pridedame uždavinius prie 11-A kurso
+
+QUESTIONS.push(
+    ...setsQuestions.map(q => ({
+        ...q,
+        course: "11-A",
+        topic: "Skaičių aibės ir aibių veiksmai"
+    }))
+);
