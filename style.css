@@ -419,6 +419,29 @@ h1 {
     text-align: center;
 }
 
+.skip-btn {
+    padding: 13px 23px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.skip-btn:hover {
+    background: var(--surface-hover);
+    border-color: var(--accent);
+    color: var(--text);
+}
+
+.skip-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
 /* ========================================
    QUESTIONS
 ======================================== */
@@ -717,3 +740,4 @@ footer {
         animation-duration: 0.01ms !important;
     }
 }
+
